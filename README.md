@@ -6,12 +6,16 @@ Every release carries all five platforms:
 
 | Platform | File |
 | --- | --- |
-| Windows 10/11 | `WalkthroughConstructor-<version>-win64.zip` |
+| Windows 10/11 | `WalkthroughConstructor-<version>-win64-setup.exe`, or `-win64.zip` to unpack anywhere |
 | macOS 11+ | `WalkthroughConstructor-<version>-macos.zip` |
 | Linux x64 | `WalkthroughConstructor-<version>-linux-x64.tar.gz` |
 | Android | `WalkthroughConstructor-<version>-<abi>.apk`, or `-android.apk` for every instruction set in one file |
 | iPhone / iPad | `WalkthroughConstructor-<version>-ios-unsigned.ipa` |
 
-The Windows and Linux builds update themselves from here: the app looks once a day and the button in its settings looks now. Android installs through the system installer. The macOS and iOS builds open this page instead, because neither is signed by a paid Apple account and installing one takes a step an app cannot take on its own behalf - each release says which.
+The setup for Windows installs for the one user who runs it, without asking for an administrator, adds the app to the Start menu and to Settings, Apps, and puts the command line on PATH. Windows SmartScreen does not know the setup, which is not signed, and says "Windows protected your PC" the first time: press More info, then Run anyway.
 
-Nothing is committed here by hand. The files and the notes are written by the release pipeline of the source repository.
+The Windows and Linux builds update themselves from here, installed or unpacked: the app looks once a day and the button in its settings looks now. Android installs through the system installer. The macOS and iOS builds open this page instead, because neither is signed by a paid Apple account and installing one takes a step an app cannot take on its own behalf - each release says which.
+
+The Windows, macOS and Linux builds carry an MCP server with the app, so Claude Desktop, Claude Code, Cursor, VS Code and other MCP clients can read the story open in it. [MCP.md](MCP.md) says where it lies and how to connect a client.
+
+Nothing is committed here by hand. The files, the notes and these pages are written by the release pipeline of the source repository.
