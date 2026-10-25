@@ -18,4 +18,6 @@ The Windows and Linux builds update themselves from here, installed or unpacked:
 
 The Windows, macOS and Linux builds carry an MCP server with the app, so Claude Desktop, Claude Code, Cursor, VS Code and other MCP clients can read the story open in it. [MCP.md](MCP.md) says where it lies and how to connect a client.
 
+The app can send anonymous statistics of how it is used to Google Analytics, and only after the author has said yes. [STATISTICS.md](STATISTICS.md) lists everything it can send, what it never sends, and how to switch it off.
+
 Nothing is committed here by hand. The files, the notes and these pages are written by the release pipeline of the source repository.
